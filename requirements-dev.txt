@@ -1,0 +1,2 @@
+# Used by the official OpenAI skill validator; the voice helper is standard-library only.
+PyYAML==6.0.3

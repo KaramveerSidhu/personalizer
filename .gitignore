@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.personalizer/
+voice-profile.md
+voice-profile.*.md
+samples/
+!assets/voice-profile.template.md
+.venv/
+eval-results/
