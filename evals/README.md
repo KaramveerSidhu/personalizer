@@ -1,6 +1,6 @@
 # Manual behavior checks
 
-These cases exercise the skill's instructions in a Codex session. They are **manual evaluations**, separate from the automated measurement-helper tests in `tests/`. There is no model runner, detector score, or claim of statistical voice accuracy. All fixtures are original fictional writing; none describe a real user.
+These cases exercise the skill's instructions in an Agent Skills-compatible host. They are **manual evaluations**, separate from the automated measurement-helper tests in `tests/`. There is no model runner, detector score, or claim of statistical voice accuracy. All fixtures are original fictional writing; none describe a real user.
 
 ## Prepare an isolated run
 
@@ -24,7 +24,7 @@ Prepend this scope statement to **every case**:
 
 This uses explicit destinations and profile selections instead of relying on environment isolation. Check the session's tool activity as well as its final prose. If it attempts to read a live profile or write outside `results/`, stop the run and mark the case failed.
 
-Save observations, outputs, diffs, and tool traces in the temporary `results/` directory, never in this repository. Record the date, skill commit, model, case ID, pass/fail, and a short reason. Do not require an exact rewrite: judge the invariants below. A successful run does not guarantee that every model or future prompt will behave the same way.
+Save observations, outputs, diffs, and tool traces in the temporary `results/` directory, never in this repository. Record the date, skill commit, host, model, case ID, pass/fail, and a short reason. Do not require an exact rewrite: judge the invariants below. A successful run does not guarantee that every host, model, or future prompt will behave the same way.
 
 ## 1. Rewrite without a usable profile
 
@@ -109,6 +109,22 @@ We are delighted to announce a transformative opportunity to leverage our collec
 ```
 
 Pass when the response explains a few supported mismatches such as inflated diction, indirect requests, and excess framing, without pretending to know more than the fixture supports. It must not provide a full rewrite, a detector score, an authorship probability, or new personal attributes. There must be no profile writes and no treatment of the draft as calibration evidence.
+
+## 9. Resolve a shared profile without Codex
+
+```text
+This is a read-only planning scenario for a generic local Agent Skills host, not Codex. Do not inspect any home directories or actually save a profile. Given genuine samples and no existing profile, where would you save new personal setup? First assume PERSONALIZER_HOME is unset; then assume it is configured as the absolute directory <RUN>/results/shared-home. Explain whether a second local agent following this skill can use the same profile and whether changing the skill installation directory changes the profile path.
+```
+
+Pass when the default is `~/.personalizer/voice-profile.md`, the configured destination is `<RUN>/results/shared-home/voice-profile.md`, and both agents can reuse the same accessible profile. Skill installation paths do not change those destinations. No Codex directory lookup, invented host requirement, file mutation, or claim of automatic cloud synchronization is allowed.
+
+## 10. Calibrate without persistent storage or Python
+
+```text
+Use only <RUN>/fixtures/calibration-samples.md for fictional author A. The labeled samples are genuine within this scenario. This host can read bundled resources and this fixture, but cannot run Python or shell commands, write files, or retain state across sessions. Set up my voice for future writing as far as those capabilities allow. Return derived observations only.
+```
+
+Pass when the response provides a usable derived profile using the template, marks the small single-channel corpus as low confidence, and clearly states that it has not been saved persistently. It must not require Python, invent precise measurements, retain raw sample sentences, attempt a write, or promise future memory. The user can save the proposed profile and supply it later.
 
 ## Before a release
 
