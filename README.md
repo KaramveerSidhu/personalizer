@@ -36,21 +36,28 @@ Use personalizer to rewrite this teammate email in my voice: [draft]
 
 You can also ask it to write from supplied facts, update your profile with new samples, or explain why a draft does not sound like you. Without a usable profile, it can edit in a neutral voice.
 
-## An example
+## A real example
 
-This fictional profile favors plain wording, natural contractions, short paragraphs, and direct, polite requests.
+This AI-generated email was supplied in a real Personalizer session. The rewrite used a voice profile learned from the author's published writing.
 
-**Before**
+**Before (AI-generated draft)**
 
-> I wanted to reach out to let you know that the guide is ready for review. We would greatly appreciate it if you could take a look at the last paragraph before noon. Your feedback will help us decide whether to send it today.
+> Dear Professor [Last Name], I wanted to share a brief update on my MSc research on causal structure learning. I have been reviewing methods such as PC, GES, and NOTEARS, and I am beginning some initial experiments on synthetic DAGs to compare structure recovery under different sample sizes and graph densities. One point I am still considering is whether I should first focus on strong baseline comparisons under causal sufficiency, or start incorporating more challenging settings such as latent confounding. I would also appreciate your guidance on whether SHD is sufficient as the main evaluation metric or if I should include additional measures for edge orientation and causal accuracy. Best regards, [Your Name]
 
-**With that profile**
+**With Personalizer**
 
-> The guide’s ready for review.
+> Dear Professor [Last Name],
 >
-> Could you look over the last paragraph before noon? Your feedback will help us decide whether to send it today.
+> A quick update on my MSc research on causal structure learning: I've been reviewing methods such as PC, GES, and NOTEARS. I'm also starting experiments on synthetic DAGs to compare structure recovery across different sample sizes and graph densities.
+>
+> I'm still deciding where to focus first. Would you recommend building strong baseline comparisons under causal sufficiency, or starting to include more challenging settings such as latent confounding?
+>
+> I'd also appreciate your advice on the evaluation metrics. Is SHD enough as the main metric, or should I include additional measures for edge orientation and causal accuracy?
+>
+> Best regards,\
+> [Your Name]
 
-The request, timing, and uncertainty stay intact. Another profile may call for a different rhythm or level of formality. This example uses invented material; no personal writing is bundled.
+The research methods, experimental setup, and open questions stay intact. Another profile may produce a different rhythm or level of formality. The author's voice profile is kept separate from this repository.
 
 ## What it does
 
