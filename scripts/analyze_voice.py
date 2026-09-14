@@ -29,7 +29,7 @@ LIMITATIONS = [
     "Unicode word tokens include numbers and contractions; dotted abbreviations may be multiple tokens.",
     "Sentence boundaries are estimated; fragments count, common abbreviations and decimals are protected.",
     "Paragraphs are nonempty blocks separated by blank lines; samples never share boundaries.",
-    "Basic Markdown cleanup excludes code, URL destinations, frontmatter and marked blockquotes; complex Markdown, HTML and unmarked quotations need manual cleanup.",
+    "Basic Markdown cleanup excludes fenced and inline code, URL destinations, frontmatter and marked blockquotes; indented code, complex Markdown, HTML and unmarked quotations need manual cleanup.",
     "Headings detect ATX syntax only; list density counts marked lines, not semantic items.",
     "Punctuation counts retained prose characters, including abbreviation and decimal periods; ellipses count once.",
     "Contractions and pronouns use small English marker lists; ambiguous apostrophe-s forms are conservative.",

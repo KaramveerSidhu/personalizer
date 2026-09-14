@@ -1,4 +1,4 @@
 interface:
   display_name: "Personalizer"
-  short_description: "Natural writing in your own evidence-based voice"
-  default_prompt: "Use $personalizer to rewrite this in my voice while preserving its meaning and protected content."
+  short_description: "Write and edit prose in your own voice"
+  default_prompt: "Use $personalizer to rewrite this in my voice while keeping the meaning, facts, and quotes intact."

@@ -31,7 +31,7 @@ Use [voice-profile.template.md](../assets/voice-profile.template.md) as the sche
 
 Every meaningful inferred trait needs a scope, confidence, and brief evidence summary using sample IDs, not excerpts. Mark repeatedly corroborated traits high, repeated but narrow-context observations medium, and sparse/contradictory observations low. These are editorial confidence judgments, not statistical probabilities. Leave unsupported channel overrides unknown.
 
-For supplied files, optionally run `python3 <skill-directory>/scripts/analyze_voice.py --help`, then pass their paths as separate arguments. With no paths the helper reads stdin. It prints aggregate JSON without excerpts or filenames and never creates profiles. Use separate runs per channel when relevant. Keep counting-method limitations with any saved metrics; assess syntax and rhetorical choices yourself.
+For supplied files, optionally run `python3 <skill-directory>/scripts/analyze_voice.py --help`, then pass their paths as separate arguments. With no paths the helper reads stdin. It prints aggregate JSON without excerpts or filenames and never creates profiles. Use separate runs per channel when relevant. Its cleanup handles fenced and inline code, not indented code or all quotations; exclude remaining non-author material before accepting its measurements, or use approximate in-context analysis. Keep counting-method limitations with any saved metrics; assess syntax and rhetorical choices yourself.
 
 ## Update without flattening the voice
 

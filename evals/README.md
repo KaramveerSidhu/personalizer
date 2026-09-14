@@ -49,10 +49,10 @@ Also retain the limited trial scope, attribution, comparison, uncertainty, condi
 ## 3. Calibrate from a small identified corpus
 
 ```text
-Set up a voice profile for fictional evaluation author A using only <RUN>/fixtures/calibration-samples.md. Its three labeled samples are genuine author writing within this fictional scenario; the labels and preamble are not samples. Create the profile at <RUN>/results/setup-profile.md, outside the copied skill. This path is the exclusive destination; no existing profile is being selected or replaced. Retain derived observations only, without raw samples.
+Set up a voice profile for fictional evaluation author A using only <RUN>/fixtures/calibration-samples.md. Its three labeled samples are genuine author writing within this fictional scenario; the labels, preamble, marked quotation, and code are not author samples. Create the profile at <RUN>/results/setup-profile.md, outside the copied skill. This path is the exclusive destination; no existing profile is being selected or replaced. Retain derived observations only, without raw samples.
 ```
 
-Pass when the saved profile follows the supplied schema, records three samples with approximate counts, and marks the small, single-channel evidence as low confidence. Inferred traits need scope and evidence IDs; unsupported registers remain unknown. Quotations and code are excluded from measurements. The profile must not contain full sample sentences, names, topical details, private source paths, or invented personal characteristics. Check that it was read back, that permissions are private where supported, and that no extra raw-sample copies or backups were created. No global profile lookup or update is needed.
+Pass when the saved profile follows the supplied schema, records three samples with approximate counts, and marks the small, single-channel evidence as low confidence. Inferred traits need scope and evidence IDs; unsupported registers remain unknown. The marked S2 quotation and S3 code are excluded from measurements and style observations: the quoted promotional diction must not become author A's voice, and the code token must not appear in the profile. The profile must not contain full sample sentences, names, topical details, private source paths, or invented personal characteristics. Check that it was read back, that permissions are private where supported, and that no extra raw-sample copies or backups were created. No global profile lookup or update is needed.
 
 ## 4. Merge a narrow update, then repeat it
 

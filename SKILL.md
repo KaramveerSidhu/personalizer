@@ -1,6 +1,6 @@
 ---
 name: personalizer
-description: "Use when asked to write in the user's voice, make prose sound like them, personalize or humanize writing, remove AI-writing patterns, or learn, update, use, or diagnose a voice profile. Also use for audience-facing prose with a configured author voice. Excludes source code, configuration, raw data, research without a writing deliverable, and exact legal or formulaic text."
+description: "Write and edit prose in the user's voice. Use when asked to personalize or humanize writing, or learn, update, or diagnose a voice profile. Excludes code, configuration, raw data, and exact formulaic text."
 license: MIT
 compatibility: "For Agent Skills-compatible hosts. Persistent profiles need private file storage; the optional measurement helper needs Python 3.10+. Writing can use samples or a profile supplied in the conversation."
 ---
@@ -8,6 +8,8 @@ compatibility: "For Agent Skills-compatible hosts. Persistent profiles need priv
 # Personalizer
 
 Remove generic writing habits and match the actual author's voice without changing the substance. Optimize for useful individual writing, never detector scores or authorship claims.
+
+Also apply to audience-facing prose with a configured author voice. Skip research without a writing deliverable and exact legal or formulaic text; source code, configuration, and raw data are outside this skill's scope.
 
 Use the host's available tools; no particular agent, API, or shell is required. Resolve bundled references relative to this skill directory. If file access is unavailable, use samples or a profile supplied in the conversation. If persistent storage is unavailable, return the proposed derived profile for the user to save; never claim it was saved or will be remembered across sessions. The Python helper is optional.
 
